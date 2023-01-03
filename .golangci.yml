@@ -1,0 +1,65 @@
+run:
+  go: '1.19'
+  timeout: 10m
+
+linters:
+  disable-all: true
+  enable:
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - contextcheck
+    - decorder
+    - depguard
+    - dogsled
+    - dupl
+    - errcheck
+    - errchkjson
+    - exportloopref
+    - exhaustive
+    - gci
+    - goconst
+    - gocritic
+    - gofmt
+    - gofumpt
+    - goimports
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - interfacebloat
+    - lll
+    - makezero
+    - misspell
+    - nestif
+    - nakedret
+    - nilerr
+    - nilnil
+    - noctx
+    - nolintlint
+    - prealloc
+    - predeclared
+    - reassign
+    - rowserrcheck
+    - staticcheck
+    - stylecheck
+    - sqlclosecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - whitespace
+
+issues:
+  exclude-rules:
+    - linters:
+        - lll
+      source: "^//" # skip lll check for comments
+    - path: _test\.go
+      linters:
+        - bodyclose
+        - noctx
+
+linters-settings:
+  errchkjson:
+    check-error-free-encoding: true

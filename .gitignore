@@ -1,0 +1,17 @@
+*.o
+*.a
+*.so
+*.html
+.env
+
+*.test
+
+.vscode/
+.idea/
+vendor/
+
+.DS_Store
+.*.sw?
+*~
+*.log
+*.pem
